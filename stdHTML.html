@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Học Viên</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Quản Lý Học Viên</h1>
+    </header>
+    <div class="form-container">
+        <h2>Thông tin học viên</h2>
+        <label for="studentId">ID:</label>
+        <input type="text" id="studentId">
+
+        <label for="studentName">Họ tên:</label>
+        <input type="text" id="studentName">
+
+        <label for="studentDob">Ngày sinh:</label>
+        <input type="date" id="studentDob">
+
+        <label for="studentGender">Giới tính:</label>
+        <select id="studentGender">
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+        </select>
+
+        <label for="studentClass">Lớp:</label>
+        <input type="text" id="studentClass">
+
+        <label for="studentPhoto">Ảnh:</label>
+        <input type="text" id="studentPhoto" placeholder="URL của ảnh">
+
+        <div class="buttons">
+            <button onclick="studentManager.addStudent()">Thêm học viên</button>
+            <button onclick="studentManager.saveStudent()">Lưu</button>
+        </div>
+    </div>
+
+    <table id="studentTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Họ tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Lớp</th>
+            <th>Ảnh</th>
+            <th>Tùy chọn</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
